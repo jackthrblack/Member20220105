@@ -1,0 +1,17 @@
+server:
+  port: 8091
+
+#DB 접속 정보
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springbootclass?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: sb_kbj
+    password: 1234
+
+  #JPA 관련 설정 - 스프링에 속해있는 속성이기 때문에 가장 왼쪽이 아닌 탭 한번 눌러서 진행해야한다.
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update

@@ -12,6 +12,6 @@ spring:
   #JPA 관련 설정 - 스프링에 속해있는 속성이기 때문에 가장 왼쪽이 아닌 탭 한번 눌러서 진행해야한다.
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-    show-sql: true
+    show-sql: true # 이부분 때문에 콘솔에 drop, create가 보인다.
     hibernate:
       ddl-auto: update

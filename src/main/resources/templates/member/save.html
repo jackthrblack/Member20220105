@@ -12,6 +12,9 @@
 </head>
 <body>
 <form action="/member/save" method="post" th:object="${member}">
+    <div th:if="${#fields.hasGlobalErrors()}"> <!--글로벌 오류-->
+        <p class="field-error" th:each="err: ${#fields.globalErrors()}" th:text="${err}">글로벌오류</p>
+    </div>
     이메일: <input type="text" th:field="*{memberEmail}">
         <p th:if="${#fields.hasErrors('memberEmail')}" th:errors="*{memberEmail}" th:errorclass="field-error"></p>
     비밀번호: <input type="password" th:field="*{memberPassword}">

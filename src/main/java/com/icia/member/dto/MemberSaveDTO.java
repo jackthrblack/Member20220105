@@ -1,10 +1,10 @@
 package com.icia.member.dto;
 
-import lombok.AllArgsConstructor;
+
 import lombok.Data;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
-
 import javax.validation.constraints.NotBlank;
 
 @Data
